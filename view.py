@@ -16,7 +16,7 @@ torsion_commands = [
 'color sel green',
 'select clear',
 'view',
-'cofr frontCenter'
+'cofr frontCenter',
 'set bgColor white',
 'lighting depthCue false'
 ]
