@@ -1,6 +1,7 @@
 from chimerax.core.commands import run
 
-run(session, "open output.pdb")
+# run(session, "open output.pdb")
+run(session, "open polymer.pdb")
 
 torsion_commands = [
 'select @CF @H* :3-20',
@@ -17,7 +18,9 @@ torsion_commands = [
 'view',
 'cofr frontCenter',
 'set bgColor white',
-'lighting depthCue false'
+'lighting depthCue false',
+'select :1,2@C1,C2 :3@C1',
+'style sel ball'
 ]
 
 for cmd in torsion_commands:
