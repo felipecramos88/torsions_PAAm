@@ -17,6 +17,8 @@ torsion_commands = [
 'select clear',
 'view',
 'cofr frontCenter'
+'set bgColor white',
+'lighting depthCue false'
 ]
 
 for cmd in torsion_commands:
