@@ -3,7 +3,6 @@ from chimerax.core.commands import run
 run(session, "open output.pdb")
 
 torsion_commands = [
-
 'select @CF @H* :3-20',
 'hide sel atoms',
 'select :3@C1',
