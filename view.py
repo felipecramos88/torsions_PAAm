@@ -20,7 +20,8 @@ torsion_commands = [
 'set bgColor white',
 'lighting depthCue false',
 'select :1,2@C1,C2 :3@C1',
-'style sel ball'
+'style sel ball',
+'select clear'
 ]
 
 for cmd in torsion_commands:
