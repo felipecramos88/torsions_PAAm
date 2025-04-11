@@ -88,8 +88,8 @@ EOF
 
 chimerax --nogui --script $script
 
-vmd -dispdev text -e get_dihedrals.tcl
+# vmd -dispdev text -e get_dihedrals.tcl
 
-julia -t auto plot.jl intra
-julia -t auto plot.jl inter
+# julia -t auto plot.jl intra
+# julia -t auto plot.jl inter
 
