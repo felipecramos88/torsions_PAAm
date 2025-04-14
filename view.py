@@ -1,29 +1,32 @@
 from chimerax.core.commands import run
 
-# run(session, "open output.pdb")
-run(session, "open polymer.pdb")
+run(session, "open system.pdb")
 
 torsion_commands = [
-'select @CF @H* :3-20',
+'select :AAM & @CF @H*',
 'hide sel atoms',
-'select :3@C1',
+'select :AAM & :3-999999',
+'hide sel atoms',
+'select :AAM & :3@C1',
 'show sel atoms',
-'select :1',
+'select :AAM & :1',
 'color sel red',
-'select :2',
+'select :AAM & :2',
 'color sel blue',
-'select :3',
+'select :AAM & :3',
 'color sel green',
 'select clear',
-'view',
+'select :AAM & :1,2@C1,C2 :3@C1',
+'style sel ball',
+'select :AAM & :1-3',
+'select ~sel',
+'hide sel target a',
+'select clear',
 'cofr frontCenter',
 'set bgColor white',
 'lighting depthCue false',
-'select :1,2@C1,C2 :3@C1',
-'style sel ball',
-'select clear'
+'view'
 ]
 
 for cmd in torsion_commands:
     run(session, cmd)
-
